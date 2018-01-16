@@ -1,0 +1,279 @@
+
+public class ComputerO 
+
+{
+
+	DisplayBoard cellsB = new  DisplayBoard();
+	int currentScore;
+	
+	boolean endGame =false;
+	
+	
+	
+	String[ ][ ]cells= {
+
+			{ "", "", "", ""},
+
+			{ "" ,"", "", ""},
+
+			{ "", "","","" },
+
+			{ "", "", "", "" }};
+    
+      
+
+    
+     
+     
+	
+ 	
+
+ 	
+ 	 public static void EndTheGameO( String cells[][]) 
+ 	  
+ 	   {
+ 		   
+ 		boolean endGame =false;
+ 		 
+ 		 //Search row by row to find if they have any 4 o's in the row
+ 	   
+ 		   int countO=0;
+ 		   
+ 		   int countOC = 0;
+ 		   
+ 		 
+ 		   
+ 		   for(int row=0; row<=3; row++)
+ 	    
+ 	     {//start of for
+ 	     
+ 	    
+ 	     
+ 	     for(int col=0; col<=3; col++)
+ 	     
+ 	    
+ 	     {// start of second for
+ 	     
+ 	    	 if(cells[row][col]=="O" )
+ 	     
+ 	     {//start of if
+ 	     
+ 	    
+ 	    		 countO++;
+ 	     
+ 	     }//end of if
+ 	     
+ 	    
+ 	     }//end of second for
+ 	  
+ 	     if(countO==4  )
+ 	  
+ 	     {
+ 	    	 endGame=true;
+ 	    	 
+ 	    	 System.out.println("Player O won! Game Over...");
+ 	    	 System.out.println("Score:");
+ 	    	 
+ 	    	 System.exit(0);
+ 	    	 
+ 	    	 
+ 	     }
+ 	     
+ 	     
+ 	     }//end of first for
+
+ 	     
+
+ 	     
+ 	     //Search col by col to find if they have any 4 o's in the col
+ 	     for(int col=0; col<=3; col++)
+ 	    
+ 	     {
+ 	     
+ 	    
+ 	     
+ 	     for(int row=0; row<=3; row++)
+ 	     
+ 	     {
+ 	     
+ 	    	 if(cells[row][col]=="O")
+ 	     
+ 	     {
+ 	     
+ 	    
+ 	    		 countOC++;
+ 	     
+ 	     }
+ 	     
+ 	     }
+ 	     
+ 	  
+ 	     if(countOC==4)
+ 	  
+ 	     {
+ 	    	 endGame=true;
+ 	    	 
+ 	    	 System.out.println("Player O won! Game Over...");
+ 	    	 System.out.println("Score:");
+ 	    	 
+ 	    	 System.exit(0);
+ 	    	 
+ 	    	 
+ 	     }
+ 	     
+ 	     }
+ 	     }
+
+ 	     
+ 	     public static void EndTheGameX(String cells[][]) 
+ 	     
+ 	     {
+ 	     
+ 	    	boolean endGame =false;
+ 	    	  int countX=0;
+ 	   	   
+ 	   	   int countXC = 0;
+ 	    //Search row by row to find if they have any 4 X's in the row
+ 	    
+ 	    	 
+ 	    	 for(int row=0; row<=3; row++)
+ 	    	    
+ 	     {
+ 	     
+ 	    
+ 	     
+ 	     for(int col=0; col<=3; col++)
+ 	     
+ 	     {
+ 	     
+ 	    	 if(cells[row][col]=="X"&&cells[row+1][col]=="X"&&cells[row+2][col]=="X"&&cells[row+3][col]=="X"|| cells[row][col]=="X"&&cells[row-1][col]=="X"&&cells[row-2][col]=="X"&&cells[row-3][col]=="X" )
+ 	     
+ 	     {
+ 	     
+ 	    
+ 	    		 countX++;
+ 	     
+ 	     }
+ 	     
+ 	     }
+ 	     
+ 	  
+ 	     if(countX==4)
+ 	  
+ 	     {
+ 	    	endGame=true;
+ 	    	 
+ 	    	 System.out.println("Player X won! Game Over...");
+ 	    	 System.out.println("Score:");
+ 	    	 
+ 	    	 System.exit(0);
+ 	    	 
+ 	    	 
+ 	     }
+ 	     
+ 	     
+ 	     }
+
+ 	     
+ 	     //Search col by col to find if they have any 4 X's in the col
+ 	     for(int col=0; col<=3; col++)
+ 	    	    
+ 	     {
+ 	     
+ 	     
+ 	     
+ 	     for(int row=0; row<=3; row++)
+ 	     
+ 	     {
+ 	     
+ 	    	 if(cells[row][col]=="X")
+ 	     
+ 	     {
+ 	     
+ 	    
+ 	    		 countXC++;
+ 	     
+ 	     }
+ 	     
+ 	     }
+ 	     
+ 	  
+ 	     if(countXC==4)
+ 	  
+ 	     {
+ 	    	 endGame=true;
+ 	    	 
+ 	    	 System.out.println("Player X won! Game Over...");
+ 	    	 System.out.println("Score:");
+ 	    	 
+ 	    	 System.exit(0);
+ 	    	 
+ 	    	 
+ 	     }
+ 	     
+ 	     
+ 	     }
+ 	     
+ 	     
+ 	   //  if(countX) *DIAGNOL
+ 	     
+ 	     
+ 	     
+ 	     
+ 	     
+ 	     
+ 	     
+ 	     
+ 	     
+ 	     
+ 	     
+
+     
+     }  
+ 
+     public void ComputerPlay(String cells[][])
+     
+     {
+     
+    	 int randomCellRow= (int) (Math.random()*3+0);
+ 	    
+ 	    int randomCellColumn= (int) (Math.random()*3+0);
+    	 
+     System.out.println("Player O's Turn:");
+    	 
+     for(int x=randomCellRow; x<= 3; x++)
+    
+     {
+     
+     
+     for(int y=randomCellColumn; y<=3; y++)
+     
+     {
+
+    	  //if empty cell put O and exist
+    	
+    	 if(cells[x][y] =="" )
+    	
+    	 {
+    		 cells[x][y]="O";
+    		
+    		 cellsB.PrintCells2(cells);
+    		 
+    		 break;
+    	 }
+
+
+break;
+     }
+
+break;
+     
+     }
+
+
+}
+
+
+
+
+}

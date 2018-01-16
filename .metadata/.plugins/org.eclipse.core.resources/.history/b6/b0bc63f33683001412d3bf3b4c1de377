@@ -1,0 +1,62 @@
+package arrays5;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Main
+{
+	public static void main(String[] args) throws IOException
+	{
+		
+		BufferedReader myinput=new BufferedReader(new InputStreamReader(System.in));
+
+	double totalClassAverage;
+	double average=0;
+	String subject;
+	double enteries;
+	String name;
+	double grade;
+	double total=0;
+	double classaverage=0;
+	int x;
+	double total2=0;
+	double grade2=0;
+	for(x=1;x<=2; x++)
+	{
+		System.out.println("What is your name?");
+		name=myinput.readLine();
+		
+		for(int y=1;y<=1; y++)
+		{
+			System.out.println("score: "+y);
+			subject=myinput.readLine();
+			
+			System.out.println("What is your grade?");
+			grade=Double.parseDouble(myinput.readLine());
+			
+			total=total+grade;
+		}
+		
+		
+		
+		for(int r=1;r<=1; r++)
+		{
+			System.out.println("score 2: "+r);
+			subject=myinput.readLine();
+			
+			System.out.println("What is your grade?");
+			grade2=Double.parseDouble(myinput.readLine());
+			
+			total2=total2+grade2;
+			
+			average=total2+total/2;
+			System.out.println("average "+average);
+		}
+		total=0;
+		}
+	}
+	
+	
+	
+}

@@ -1,0 +1,94 @@
+
+public class main {
+
+	public static void main(String[] args) 
+	
+	{
+		String[ ][ ]cells= {
+
+				{ " 1", "2", "3", "4"},
+
+				{ "5" ,"6", "7", "8"},
+
+				{ "9", "10","11","12" },
+
+				{ "13", "14", "15", "16" }};
+
+	
+				
+
+						for(int r=0; r<cells.length;r++)
+
+						{
+							//System.out.print(cells[r][0]);
+
+							for(int c=0; c<cells[0].length;c++) // prints random numbers in String type matrix.
+
+							{
+								System.out.print("\t" + cells[r][c]);
+							
+								if(c ==0 ||c ==1 ||c ==2 ||c ==3)
+								{
+									System.out.print("|");
+								}
+							
+							} //end of first for
+							
+							if( r==0 ||r ==1 ||r ==2)
+							{
+								System.out.println( "\n------------------------------------------------\n");
+							}
+
+							
+
+							
+						}
+
+
+						System.out.println();
+ cells[1][0]="X";
+
+ for(int r=0; r<cells.length;r++)
+
+	{
+		//System.out.print(cells[r][0]);
+
+		for(int c=0; c<cells[0].length;c++) // prints random numbers in String type matrix.
+
+		{
+			System.out.print("\t" + cells[r][c]);
+		
+			if(c ==0 ||c ==1 ||c ==2 ||c ==3)
+			{
+				System.out.print("|");
+			}
+		
+		} //end of first for
+		
+		if( r==0 ||r ==1 ||r ==2)
+		{
+			System.out.println( "\n------------------------------------------------\n");
+		}
+
+		
+
+		
+	}
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	}
+
+}

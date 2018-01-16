@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.text.DecimalFormat"/>
+<fullyQualifiedTypeName name="java.util.StringTokenizer"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+<fullyQualifiedTypeName name="Dog.Dog"/>
+<fullyQualifiedTypeName name="CombinationLock.MTCombinationLock"/>
+<fullyQualifiedTypeName name="MTCircle.MTCircle"/>
+<fullyQualifiedTypeName name="MTSquare.MTSquare"/>
+<fullyQualifiedTypeName name="MTShapes.MTShapes"/>
+<fullyQualifiedTypeName name="MTTriangle.MTTriangle"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+</qualifiedTypeNameHistroy>
